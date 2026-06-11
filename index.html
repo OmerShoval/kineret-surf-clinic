@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omer Shoval Surf Clinic — וייקסרף קליניק בכנרת | יולי 2026</title>
+<meta name="description" content="סרף קליניק מקצועי בכנרת עם עומר שובל. 3 תאריכים ביולי, 5 מקומות בלבד בכל תאריך. אימון אישי על הגל, וידאו אנליזה, בלי צורך בניסיון קודם.">
+<meta property="og:title" content="Omer Shoval Surf Clinic — וייקסרף קליניק בכנרת">
+<meta property="og:description" content="3–30 דקות עמידה על גל ביום אחד. אימון אישי, וידאו אנליזה, 5 מקומות בלבד לכל תאריך.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kineret-surf.vercel.app/">
+<meta property="og:locale" content="he_IL">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="alternate" hreflang="he" href="https://kineret-surf.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://kineret-surf.vercel.app/">
+<link rel="alternate" hreflang="x-default" href="https://kineret-surf.vercel.app/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏄</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Archivo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1620;
+  --deep:#0e2233;
+  --ocean:#11405e;
+  --wave:#1e88c7;
+  --foam:#5ec4ee;
+  --sand:#f4efe7;
+  --white:#ffffff;
+  --gold:#e8b34b;
+  --muted:#7d96a8;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;background:var(--ink);color:var(--sand);line-height:1.6;overflow-x:hidden}
+[dir="ltr"] body{font-family:'Archivo','Heebo',sans-serif}
+.en{display:none}
+html.lang-en .he{display:none}
+html.lang-en .en{display:block}
+html.lang-en span.en,html.lang-en i.en{display:inline}
+html.lang-en a.en{display:inline-flex}
+span.en,a.en,i.en{display:none}
+html.lang-en span.he,html.lang-en a.he,html.lang-en i.he{display:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-weight:900;line-height:1.15}
+section{padding:56px 0}
+.kicker{color:var(--foam);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+.section-title{font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.1rem;max-width:640px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(11,22,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(94,196,238,.12)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;gap:10px}
+.logo{font-weight:900;font-size:.85rem;letter-spacing:.04em;color:var(--white);text-decoration:none;white-space:nowrap}
+.logo b{color:var(--foam)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-btn{background:none;border:1px solid rgba(94,196,238,.35);color:var(--foam);padding:6px 14px;border-radius:99px;cursor:pointer;font-family:inherit;font-weight:700;font-size:.85rem}
+.lang-btn:hover{background:rgba(94,196,238,.12)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:48px;background:var(--wave);color:var(--white);font-weight:700;padding:11px 28px;border-radius:99px;text-decoration:none;transition:.2s;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--foam);color:var(--ink);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#f5c869;color:var(--ink)}
+.btn-sm{padding:7px 18px;font-size:.88rem;min-height:40px}
+.nav-cta{display:none}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:96px 0 56px;background:
+  radial-gradient(ellipse 80% 60% at 70% 10%,rgba(30,136,199,.25),transparent),
+  radial-gradient(ellipse 60% 50% at 20% 90%,rgba(17,64,94,.5),transparent),
+  var(--ink)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);color:var(--white);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--foam)}
+.hero .sub{font-size:1.05rem;color:var(--muted);margin-bottom:28px;max-width:520px}
+.date-pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px}
+.pill{background:rgba(94,196,238,.1);border:1px solid rgba(94,196,238,.3);color:var(--foam);padding:8px 18px;border-radius:99px;font-weight:700;font-size:.95rem}
+.pill.full{opacity:.45;text-decoration:line-through}
+.hero-ctas{display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.hero-note{font-size:.85rem;color:var(--muted);margin-top:16px}
+.video-frame{aspect-ratio:9/14;max-height:560px;width:100%;max-width:340px;margin:0 auto;border-radius:var(--radius);overflow:hidden;background:var(--deep);border:1px solid rgba(94,196,238,.2);position:relative;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.video-frame iframe,.video-frame blockquote{width:100%!important;height:100%!important;min-width:0!important;margin:0!important;border:0!important}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;gap:12px;color:var(--muted)}
+.ph .ph-icon{width:64px;height:64px;border-radius:50%;background:rgba(94,196,238,.12);display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+.ph b{color:var(--foam)}
+
+/* MATH / VALUE */
+.math{background:var(--deep)}
+.compare{display:grid;grid-template-columns:1fr;gap:20px;margin-top:36px}
+.compare-card{background:var(--ink);border-radius:var(--radius);padding:28px 22px;border:1px solid rgba(125,150,168,.15)}
+.compare-card.hot{border-color:var(--gold);position:relative}
+.compare-card.hot::before{content:attr(data-tag);position:absolute;top:-13px;inset-inline-start:28px;background:var(--gold);color:var(--ink);font-weight:900;font-size:.75rem;padding:4px 14px;border-radius:99px;letter-spacing:.08em}
+.compare-card h3{font-size:1.25rem;color:var(--white);margin-bottom:20px}
+.stat{font-size:clamp(2rem,5vw,3rem);font-weight:900;color:var(--foam);line-height:1}
+.compare-card.hot .stat{color:var(--gold)}
+.stat-label{color:var(--muted);font-size:.95rem;margin:6px 0 22px}
+.compare-card ul{list-style:none}
+.compare-card li{padding:9px 0;border-top:1px solid rgba(125,150,168,.12);color:var(--sand);font-size:.97rem}
+.compare-card li::before{content:"–";color:var(--muted);margin-inline-end:10px}
+.compare-card.hot li::before{content:"✓";color:var(--gold)}
+
+/* METHOD */
+.method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:36px}
+.m-card{background:var(--deep);border-radius:var(--radius);padding:22px 18px;border:1px solid rgba(94,196,238,.1)}
+.m-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.2rem;color:rgba(94,196,238,.35);line-height:1}
+.m-card h3{font-size:1.05rem;color:var(--white);margin:14px 0 8px}
+.m-card p{color:var(--muted);font-size:.92rem}
+
+/* TECHNIQUES */
+.tech{background:linear-gradient(180deg,var(--deep),var(--ocean));text-align:center}
+.tech .lead{margin:0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:38px}
+.chip{background:rgba(255,255,255,.07);border:1px solid rgba(94,196,238,.3);padding:12px 22px;border-radius:99px;font-weight:700;font-size:.98rem;color:var(--white)}
+.chip span{color:var(--foam);margin-inline-end:8px}
+
+/* TIMELINE */
+.timeline{margin-top:44px;display:grid;gap:0}
+.t-row{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:20px 0;border-top:1px solid rgba(125,150,168,.14)}
+.t-row:last-child{border-bottom:1px solid rgba(125,150,168,.14)}
+.t-time{font-family:'Archivo',sans-serif;font-weight:900;color:var(--foam);font-size:1.05rem}
+.t-row h3{color:var(--white);font-size:1.05rem;margin-bottom:4px}
+.t-row p{color:var(--muted);font-size:.95rem}
+
+/* VIDEOS */
+.videos{background:var(--deep)}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,380px));justify-content:center;gap:24px;margin-top:44px}
+.v-card{background:var(--ink);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(94,196,238,.12)}
+.v-slot{aspect-ratio:9/14;position:relative;background:#0a131c}
+.v-slot iframe,.v-slot blockquote{width:100%!important;height:100%!important;min-width:0!important;margin:0!important;border:0!important}
+.v-meta{padding:16px 18px}
+.v-tag{display:inline-block;font-size:.72rem;font-weight:900;letter-spacing:.1em;padding:3px 10px;border-radius:99px;margin-bottom:8px}
+.v-tag.before{background:rgba(125,150,168,.2);color:var(--muted)}
+.v-tag.after{background:rgba(232,179,75,.18);color:var(--gold)}
+.v-meta h3{font-size:1rem;color:var(--white)}
+.v-meta p{font-size:.85rem;color:var(--muted)}
+
+/* DATES */
+.dates-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:420px;margin:36px auto 0}
+.d-card{background:var(--deep);border:1px solid rgba(94,196,238,.15);border-radius:var(--radius);padding:34px 28px;text-align:center;display:flex;flex-direction:column;gap:6px;transition:.2s}
+.d-card:hover{border-color:var(--foam);transform:translateY(-4px)}
+.d-day{color:var(--muted);font-weight:500}
+.d-date{font-family:'Archivo',sans-serif;font-size:2.6rem;font-weight:900;color:var(--white);line-height:1.1}
+.d-month{color:var(--foam);font-weight:700;margin-bottom:10px}
+.d-spots{margin:10px 0 18px}
+.spots-bar{height:8px;background:rgba(125,150,168,.18);border-radius:99px;overflow:hidden;margin-bottom:8px}
+.spots-fill{height:100%;background:linear-gradient(90deg,var(--wave),var(--foam));border-radius:99px}
+.d-spots small{color:var(--muted);font-size:.85rem}
+.d-spots .left{color:var(--gold);font-weight:900}
+.d-card .btn{margin-top:auto}
+.d-card.soldout{opacity:.55}
+.d-card.soldout .btn{background:rgba(125,150,168,.25);pointer-events:none}
+.price-line{text-align:center;margin-top:36px}
+.price-line .p{font-size:2rem;font-weight:900;color:var(--white)}
+.price-line .p b{color:var(--gold)}
+.price-line small{display:block;color:var(--muted);margin-top:6px}
+
+/* INFO */
+.info{background:var(--deep)}
+.info-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:36px}
+.faq-item{background:var(--ink);border:1px solid rgba(125,150,168,.14);border-radius:14px;padding:24px}
+.faq-item h3{color:var(--white);font-size:1.02rem;margin-bottom:8px}
+.faq-item h3::before{content:"//";color:var(--foam);margin-inline-end:8px;font-family:'Archivo',sans-serif}
+.faq-item p{color:var(--muted);font-size:.95rem}
+
+/* FINAL CTA */
+.final{text-align:center;background:
+  radial-gradient(ellipse 70% 80% at 50% 100%,rgba(30,136,199,.3),transparent),var(--ink)}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--white);max-width:760px;margin:0 auto 20px}
+.final h2 em{font-style:normal;color:var(--gold)}
+.final .lead{margin:0 auto 36px}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(125,150,168,.15);padding:36px 0;text-align:center;color:var(--muted);font-size:.88rem}
+footer a{color:var(--foam);text-decoration:none}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));inset-inline-end:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* ====== scale up: tablet ====== */
+@media(min-width:480px){
+  .nav-cta{display:inline-flex}
+}
+@media(min-width:640px){
+  .hero-ctas{flex-direction:row;align-items:center;flex-wrap:wrap}
+  .hero-ctas .btn{flex:0 0 auto}
+  .dates-grid{max-width:none;grid-template-columns:repeat(3,1fr)}
+}
+/* ====== scale up: desktop ====== */
+@media(min-width:880px){
+  .wrap{padding:0 22px}
+  section{padding:88px 0}
+  .nav-inner{height:64px}
+  .logo{font-size:1.05rem}
+  .hero{padding:130px 0 70px}
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:50px}
+  .hero .sub{font-size:1.2rem}
+  .video-frame{max-width:none;margin:0}
+  .compare{grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .compare-card{padding:36px}
+  .method-grid{grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+  .m-card{padding:28px 24px}
+  .chip{padding:14px 28px;font-size:1.05rem}
+  .t-row{grid-template-columns:110px 1fr;gap:24px;padding:22px 0}
+  .t-time{font-size:1.2rem}
+  .dates-grid{gap:22px;margin-top:44px}
+  .info-grid{grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">OMER SHOVAL <b>// SURF CLINIC</b></a>
+    <div class="nav-actions">
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+      <a class="btn btn-sm nav-cta" href="#dates"><span class="he">שריינו מקום</span><span class="en">Book a spot</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="he">
+        <p class="kicker">וייקסרף קליניק // כנרת // יולי 2026</p>
+        <h1>בין 3 ל-30 דקות של עמידה על גל. <em>ביום אחד.</em></h1>
+        <p class="sub">בוקר אחד על סירת Nautique G23 בכנרת. 5 גולשים, מאמן אחד — 3 מטר ממך, על כל גל, עם רמקול ומצלמה. בלי צורך בניסיון קודם.</p>
+      </div>
+      <div class="en">
+        <p class="kicker">Wakesurf Clinic // Sea of Galilee // July 2026</p>
+        <h1>3 to 30 minutes standing on a wave. <em>In one day.</em></h1>
+        <p class="sub">One morning on a Nautique G23 on the Sea of Galilee. 5 surfers, one coach — 3 meters from you, on every wave, with a speaker and a camera. No experience needed.</p>
+      </div>
+      <div class="date-pills" id="heroPills"></div>
+      <div class="hero-ctas">
+        <a class="btn btn-gold he" href="#dates">בדקו מקומות פנויים</a>
+        <a class="btn btn-gold en" href="#dates">Check open spots</a>
+        <a class="btn he" style="background:rgba(255,255,255,.1)" href="#method">איך זה עובד</a>
+        <a class="btn en" style="background:rgba(255,255,255,.1)" href="#method">How it works</a>
+      </div>
+      <p class="hero-note he">₪1,650 למשתתף · 08:00–12:30 · חוף סירות מגדל, כנרת</p>
+      <p class="hero-note en">₪1,650 per surfer · 08:00–12:30 · Migdal Boats Beach, Sea of Galilee</p>
+    </div>
+    <div class="video-frame" id="heroVideo">
+      <div class="ph">
+        <div class="ph-icon">▶</div>
+        <div class="he"><b>וידאו ראשי</b><br>הדביקו לינק לרילס באינסטגרם בהגדרות בראש הקובץ (HERO_REEL)</div>
+        <div class="en"><b>Hero reel</b><br>Paste an Instagram reel link in the config at the top of this file (HERO_REEL)</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ THE MATH ============ -->
+<section class="math" id="math">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">החשבון הפשוט</p>
+      <h2 class="section-title">זמן על הגל. זה כל הסיפור.</h2>
+      <p class="lead">בים, מתחילים מבלים 95% מהזמן בחתירה והמתנה. כאן הגל לא נגמר — והוא מחכה רק לך.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Simple math</p>
+      <h2 class="section-title">Time on the wave. That's the whole story.</h2>
+      <p class="lead">In the ocean, beginners spend 95% of their time paddling and waiting. Here the wave never ends — and it waits only for you.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-card">
+        <h3 class="he">סרף טריפ לפוינט ברייק בחו"ל</h3>
+        <h3 class="en">A surf trip to an overseas point break</h3>
+        <div class="stat">14–20</div>
+        <div class="stat-label he">ימים כדי לצבור את אותו זמן עמידה על גל</div>
+        <div class="stat-label en">days to log the same standing time on a wave</div>
+        <ul class="he">
+          <li>20,000 ₪ ומעלה — טיסות, לינה, ציוד</li>
+          <li>תלוי בתחזית, בסוול ובמזל</li>
+          <li>עשרות גולשים על אותו פיק</li>
+          <li>אף אחד לא מתקן לך את הטכניקה</li>
+        </ul>
+        <ul class="en">
+          <li>₪20,000+ — flights, lodging, gear</li>
+          <li>Hostage to forecast, swell and luck</li>
+          <li>Dozens of surfers on the same peak</li>
+          <li>Nobody is correcting your technique</li>
+        </ul>
+      </div>
+      <div class="compare-card hot" data-tag="THE CLINIC">
+        <h3 class="he">בוקר אחד בקליניק</h3>
+        <h3 class="en">One morning at the clinic</h3>
+        <div class="stat">3–30</div>
+        <div class="stat-label he">דקות של עמידה רצופה על הגל — באותו יום</div>
+        <div class="stat-label en">minutes standing on the wave — that same day</div>
+        <ul class="he">
+          <li>גל פרטי, מותאם אישית, בלי תור</li>
+          <li>מאמן 3 מטר ממך על כל שנייה</li>
+          <li>כל ראן מצולם ועולה לאפליקציה</li>
+          <li>₪1,650. זה הכל.</li>
+        </ul>
+        <ul class="en">
+          <li>A private, custom-shaped wave. No lineup.</li>
+          <li>A coach 3 meters away, every second</li>
+          <li>Every run filmed and uploaded to the app</li>
+          <li>₪1,650. That's it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section id="method">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">המתודולוגיה</p>
+      <h2 class="section-title">אימון מקצועי ויום כיף. ביחד.</h2>
+      <p class="lead">כל פרט בנוי כדי למקסם את הזמן שלך על הגל, את קצב ההתקדמות — ואת הכיף.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The method</p>
+      <h2 class="section-title">Pro training and a fun day. Combined.</h2>
+      <p class="lead">Every detail is built to maximize your wave time, your rate of progress — and the fun.</p>
+    </div>
+    <div class="method-grid">
+      <div class="m-card">
+        <div class="m-num">01</div>
+        <h3 class="he">ראנים של 7 דקות</h3><h3 class="en">7-minute runs</h3>
+        <p class="he">כל אחד בתורו. אינטנסיבי מספיק כדי ללמוד, קצר מספיק כדי לשמור על ריכוז ואנרגיה.</p>
+        <p class="en">Each surfer in turn. Intense enough to learn, short enough to stay sharp.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">02</div>
+        <h3 class="he">מאמן 3 מטר ממך</h3><h3 class="en">Coach 3 meters away</h3>
+        <p class="he">עומר איתך על המים, עם רמקול, מתקן אותך בזמן אמת — בכל שנייה על הגל.</p>
+        <p class="en">Omer is on the water with you, on a speaker, correcting you in real time — every second on the wave.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">03</div>
+        <h3 class="he">כל ראן מצולם</h3><h3 class="en">Every run filmed</h3>
+        <p class="he">בסוף הראן הווידאו עולה לאפליקציה. רואים, מבינים, מתקנים בראן הבא.</p>
+        <p class="en">After each run the video hits the app. Watch it, get it, fix it on the next run.</p>
+      </div>
+      <div class="m-card">
+        <div class="m-num">04</div>
+        <h3 class="he">מקסימום 5 גולשים</h3><h3 class="en">5 surfers max</h3>
+        <p class="he">קבוצה קטנה = יותר ראנים, יותר תשומת לב, יותר התקדמות. בלי קהל, בלי תור.</p>
+        <p class="en">Small group = more runs, more attention, more progress. No crowd, no queue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNIQUES ============ -->
+<section class="tech">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">על מה עובדים</p>
+      <h2 class="section-title">הטכניקות שבונות גולשים</h2>
+      <p class="lead">המטרה: ליהנות, להיות בטוחים, ולמקסם כל שנייה על הגל.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">What we train</p>
+      <h2 class="section-title">The techniques that build surfers</h2>
+      <p class="lead">The goal: have fun, stay safe, and squeeze everything out of every second on the wave.</p>
+    </div>
+    <div class="chips">
+      <div class="chip"><span>01</span><i class="he" style="font-style:normal">פלואו (Flow)</i><i class="en" style="font-style:normal">Flow</i></div>
+      <div class="chip"><span>02</span><i class="he" style="font-style:normal">סטייל</i><i class="en" style="font-style:normal">Style</i></div>
+      <div class="chip"><span>03</span><i class="he" style="font-style:normal">מיקום כפות רגליים</i><i class="en" style="font-style:normal">Foot placement</i></div>
+      <div class="chip"><span>04</span><i class="he" style="font-style:normal">מנוברים</i><i class="en" style="font-style:normal">Maneuvers</i></div>
+      <div class="chip"><span>05</span><i class="he" style="font-style:normal">סודות טכניים</i><i class="en" style="font-style:normal">Technical secrets</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE DAY ============ -->
+<section id="day">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">היום עצמו</p>
+      <h2 class="section-title">08:00–12:30. שעות הזהב של הכנרת.</h2>
+      <p class="lead">בבוקר המים חלקים כמו זכוכית — תנאי הגלישה המושלמים, לפני שהרוח נכנסת.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The day</p>
+      <h2 class="section-title">08:00–12:30. The Kinneret's golden hours.</h2>
+      <p class="lead">Morning water is glass — perfect surf conditions, before the wind picks up.</p>
+    </div>
+    <div class="timeline">
+      <div class="t-row">
+        <div class="t-time">08:00</div>
+        <div>
+          <h3 class="he">נפגשים בחוף סירות מגדל</h3><h3 class="en">Meet at Migdal Boats Beach</h3>
+          <p class="he">ליד מתחם דבאח, 5 דקות צפונית לטבריה. מלווים אתכם לרציף ועולים על הסירה.</p>
+          <p class="en">Next to the Dabah complex, 5 minutes north of Tiberias. We walk you to the dock and board.</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time">08:15</div>
+        <div>
+          <h3 class="he">תדריך קצר ויוצאים למים</h3><h3 class="en">Short briefing, then we're on the water</h3>
+          <p class="he">היכרות, בטיחות, התאמת גלשן ואפודה — וישר לעניין. סירת Nautique G23, הסירה שנבחרה 7 שנים ברציפות כטובה בעולם לוייקסרף.</p>
+          <p class="en">Intro, safety, board and vest fitting — then straight to it. A Nautique G23, voted the world's best wakesurf boat 7 years running.</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time">08:30</div>
+        <div>
+          <h3 class="he">סבבי אימון — 7 דקות כל ראן</h3><h3 class="en">Training rotations — 7-minute runs</h3>
+          <p class="he">גולשים, מקבלים תיקונים חיים מהמים, צופים בווידאו, ושוב. בין הראנים: מנוחה, שתייה, ולצפות בחברים מתקדמים מול העיניים.</p>
+          <p class="en">Surf, get live corrections from the water, review the video, repeat. Between runs: rest, hydrate, and watch your crew level up in real time.</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time">12:30</div>
+        <div>
+          <h3 class="he">חוזרים לרציף עם הוכחות</h3><h3 class="en">Back at the dock with proof</h3>
+          <p class="he">כל הראנים שלכם מחכים באפליקציה. לפני ואחרי. שלכם לתמיד.</p>
+          <p class="en">Every one of your runs is waiting in the app. Before and after. Yours forever.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER VIDEOS ============ -->
+<section class="videos" id="proof">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">מהמים, לא מהפרוספקט</p>
+      <h2 class="section-title">תלמידים אמיתיים. בוקר אחד.</h2>
+      <p class="lead">לא מבטיחים — מראים. ככה נראים האימון והתהליך כשמצלמים כל ראן.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">From the water, not the brochure</p>
+      <h2 class="section-title">Real students. One morning.</h2>
+      <p class="lead">We don't promise — we show. This is what the coaching and the process look like when every run is filmed.</p>
+    </div>
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- ============ DATES & SIGNUP ============ -->
+<section id="dates">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">תאריכים והרשמה</p>
+      <h2 class="section-title">3 תאריכים. 5 מקומות בכל אחד. זהו.</h2>
+      <p class="lead">לוחצים על תאריך — נפתח וואטסאפ ישירות לעומר עם הפרטים. סוגרים מקום בשיחה.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Dates & registration</p>
+      <h2 class="section-title">3 dates. 5 spots each. That's all.</h2>
+      <p class="lead">Tap a date — WhatsApp opens straight to Omer with your details. Lock your spot in the chat.</p>
+    </div>
+    <div class="dates-grid" id="datesGrid"></div>
+    <div class="price-line">
+      <div class="p he">₪1,650 <b>למשתתף</b></div>
+      <div class="p en">₪1,650 <b>per surfer</b></div>
+      <small class="he">כולל הכל: סירה, מאמן, אפודות, דלק, וידאו אנליזה באפליקציה. מומלץ להביא גלשן אישי לחוויה הטובה ביותר — אין? יש ציוד מקצועי על הסירה (Phase 5, Ronix, Radar)</small>
+      <small class="en">All-inclusive: boat, coach, vests, fuel, and video analysis in the app. Bring your own board for the best experience — don't have one? Pro boards on the boat (Phase 5, Ronix, Radar)</small>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOOD TO KNOW ============ -->
+<section class="info" id="info">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">טוב לדעת</p>
+      <h2 class="section-title">שאלות שכולם שואלים</h2>
+    </div>
+    <div class="en">
+      <p class="kicker">Good to know</p>
+      <h2 class="section-title">The questions everyone asks</h2>
+    </div>
+    <div class="info-grid">
+      <div class="faq-item">
+        <h3 class="he">אין לי ניסיון. זה בשבילי?</h3><h3 class="en">I've never surfed. Is this for me?</h3>
+        <p class="he">כן. המתודולוגיה בנויה גם למתחילים מאפס וגם לגולשים שרוצים לשדרג טכניקה. הגל מותאם אישית לרמה שלך, והמאמן איתך על כל שנייה.</p>
+        <p class="en">Yes. The method works for total beginners and for surfers leveling up technique. The wave is shaped to your level, and the coach is with you every second.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">מה צריך להביא?</h3><h3 class="en">What do I bring?</h3>
+        <p class="he">בגד ים, מגבת, קרם הגנה — והכי חשוב: <b style="color:var(--sand)">הגלשן שלכם</b>. לחוויה ולהתקדמות הכי טובות מומלץ להגיע עם גלשן אישי. לא בטוחים איזה? מוזמנים לכתוב לעומר אישית להמלצה. אין גלשן? יש על הסירה ציוד מקצועי מהמותגים המובילים (Phase 5, Ronix, Radar) וכל ציוד הבטיחות. יש צידנית — מומלץ להביא שתייה ופירות.</p>
+        <p class="en">Swimsuit, towel, sunscreen — and most important: <b style="color:var(--sand)">your own surfboard</b>. For the best experience and fastest progress, bring a personal board. Not sure which one? Message Omer directly for a recommendation. Don't own one? Pro boards from the top brands (Phase 5, Ronix, Radar) and all safety gear are on the boat. There's a cooler — bring water and fruit.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">איפה נפגשים וחונים?</h3><h3 class="en">Where do we meet and park?</h3>
+        <p class="he">חוף סירות מגדל, ליד מתחם דבאח (צומת מגדל, 5 דקות מטבריה צפונה). חונים בחניון הצפוני (בתשלום, פנגו) והולכים כ-100 מטר לנקודת המפגש. מומלץ להגיע 15 דקות לפני.</p>
+        <p class="en">Migdal Boats Beach, by the Dabah complex (Migdal junction, 5 min north of Tiberias). Park in the northern lot (paid, Pango) and walk ~100m to the meeting point. Arrive 15 minutes early.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">איך משלמים?</h3><h3 class="en">How do I pay?</h3>
+        <p class="he">סוגרים מקום בוואטסאפ מול עומר ומסדירים תשלום ישירות. המקום מובטח רק לאחר תשלום — 5 מקומות לתאריך, מי שמקדים גולש.</p>
+        <p class="en">Lock your spot on WhatsApp with Omer and settle payment directly. A spot is confirmed only after payment — 5 per date, first come first surf.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">ומה אם מזג האוויר לא משתף פעולה?</h3><h3 class="en">What if the weather doesn't cooperate?</h3>
+        <p class="he">הקליניק תלוי במים חלקים — לכן אנחנו גולשים בבוקר. אם ניאלץ לבטל מצידנו, תקבלו עדכון מראש ותאריך חלופי או החזר מלא.</p>
+        <p class="en">The clinic needs flat water — that's why we surf mornings. If we have to cancel from our side, you'll get advance notice and a new date or a full refund.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">כמה זמן אהיה על הגל בפועל?</h3><h3 class="en">How much actual wave time do I get?</h3>
+        <p class="he">כל ראן הוא 7 דקות, וככל שתשתפרו תוכלו למקסם אותו עד 6.5 דקות רצופות על הגל. זו בדיוק העבודה שלנו: מראן לראן תשתפרו בענק, נרים אתכם על הגל ונדאג שכולם ייהנו וימקסמו את הזמן שלהם על המים. בים, כמות כזו של זמן על גל לוקחת שבועיים-שלושה של טריפ.</p>
+        <p class="en">Every run is 7 minutes, and as you improve you can max it out at up to 6.5 minutes of continuous riding. That's exactly our job: from run to run you'll get tremendously better, we'll get you up and riding, and make sure everyone has fun and maximizes their time on the water. In the ocean, that much wave time takes a 2–3 week trip.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="he">
+      <h2>הגל מוכן. <em>15 מקומות בכל הקיץ.</em></h2>
+      <p class="lead">19, 21 ו-27 ביולי. כשזה מלא — זה מלא.</p>
+      <a class="btn btn-gold" href="#dates" style="font-size:1.1rem;padding:16px 40px">שריינו מקום עכשיו</a>
+    </div>
+    <div class="en">
+      <h2>The wave is ready. <em>15 spots all summer.</em></h2>
+      <p class="lead">July 19, 21 and 27. When it's full — it's full.</p>
+      <a class="btn btn-gold" href="#dates" style="font-size:1.1rem;padding:16px 40px">Book your spot now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>OMER SHOVAL // SURF CLINIC · <span class="he">כנרת, ישראל</span><span class="en">Sea of Galilee, Israel</span> · <a href="#" id="footerWa">WhatsApp</a></p>
+    <p class="he" style="margin-top:6px;font-size:.8rem">בשיתוף מועדון Blue Wake · סירת Nautique G23 · רישיונות וביטוחים כחוק</p>
+    <p class="en" style="margin-top:6px;font-size:.8rem">In partnership with Blue Wake club · Nautique G23 · Fully licensed & insured</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" id="waFloat" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.4"/></svg>
+</a>
+
+<script>
+/* ================================================================
+   CONFIG — everything you'll ever edit lives here
+   ================================================================ */
+
+// 1. Omer's WhatsApp number — international format, no + or dashes.
+//    Example: 0501234567 becomes 972501234567
+const WHATSAPP = "972542491388";
+
+// Branded WhatsApp link (used for the floating button + footer —
+// general "talk to me" contact, no prefilled date message).
+const WHATSAPP_LINK = "https://wa.me/message/COL2U5IJP56IB1";
+
+// 2. Spots taken per date (you update this manually as payments land).
+//    Max is 5 per date. When taken reaches 5 the card shows SOLD OUT.
+const DATES = [
+  { id: "19-07", day: 19, dow_he: "יום ראשון", dow_en: "Sunday",  taken: 0 },
+  { id: "21-07", day: 21, dow_he: "יום שלישי", dow_en: "Tuesday", taken: 0 },
+  { id: "27-07", day: 27, dow_he: "יום שני",   dow_en: "Monday",  taken: 0 },
+];
+const MAX_SPOTS = 5;
+
+// 3. Hero reel — paste an Instagram reel/post URL, e.g.
+//    "https://www.instagram.com/reel/XXXXXXXXX/"
+const HERO_REEL = "https://www.instagram.com/reel/Cug4927IKLN/";
+
+// 4. Before/After student videos — paste Instagram URLs.
+//    Each entry renders one card. tag: "before" or "after".
+//    Leave url:"" to show a styled placeholder.
+const STUDENT_VIDEOS = [
+  { url: "https://www.instagram.com/reel/CumMDw9oEUL/", tag: "before",
+    tag_he: "מקרוב", tag_en: "UP CLOSE",
+    name_he: "חוויית האימון מקרוב",
+    name_en: "The coaching experience up close",
+    note_he: "ככה נראה אימון אישי — 3 מטר ממך, על כל גל",
+    note_en: "This is what personal coaching looks like — 3 meters away, on every wave" },
+  { url: "https://www.instagram.com/reel/C7ytHebodqi/", tag: "after",
+    tag_he: "התהליך", tag_en: "THE PROCESS",
+    name_he: "תהליך של יום שלם — מא' ועד ת'",
+    name_en: "A full day process from A-Z",
+    note_he: "מהראן הראשון ועד הגלישה — בוקר אחד",
+    note_en: "From the first run to riding the wave — one morning" },
+];
+
+/* ================================================================
+   ENGINE — no need to touch anything below
+   ================================================================ */
+
+function waLink(dateLabelHe, dateLabelEn) {
+  const en = document.documentElement.classList.contains("lang-en");
+  const msg = en
+    ? `Hi Omer, I want to book a spot at the Surf Clinic on July ${dateLabelEn}. My name is: `
+    : `היי עומר, אני רוצה לשריין מקום בסרף קליניק בתאריך ${dateLabelHe} ביולי. השם שלי: `;
+  return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+}
+
+function renderDates() {
+  const grid = document.getElementById("datesGrid");
+  const pills = document.getElementById("heroPills");
+  grid.innerHTML = ""; pills.innerHTML = "";
+  DATES.forEach(d => {
+    const left = Math.max(0, MAX_SPOTS - d.taken);
+    const soldout = left === 0;
+    const pct = (d.taken / MAX_SPOTS) * 100;
+
+    pills.innerHTML += `<span class="pill ${soldout ? "full" : ""}">${d.day}.07</span>`;
+
+    const card = document.createElement("div");
+    card.className = "d-card" + (soldout ? " soldout" : "");
+    card.innerHTML = `
+      <div class="d-day"><span class="he">${d.dow_he}</span><span class="en">${d.dow_en}</span></div>
+      <div class="d-date">${d.day}</div>
+      <div class="d-month"><span class="he">יולי 2026</span><span class="en">July 2026</span></div>
+      <div class="d-spots">
+        <div class="spots-bar"><div class="spots-fill" style="width:${pct}%"></div></div>
+        ${soldout
+          ? `<small class="he"><b class="left">אזל המלאי</b></small><small class="en"><b class="left">Sold out</b></small>`
+          : `<small class="he">נשארו <b class="left">${left}</b> מתוך ${MAX_SPOTS} מקומות</small>
+             <small class="en"><b class="left">${left}</b> of ${MAX_SPOTS} spots left</small>`}
+      </div>
+      <a class="btn ${soldout ? "" : "btn-gold"} js-wa" data-d="${d.day}" href="#">
+        <span class="he">${soldout ? "מלא" : "שריינו מקום ב-WhatsApp"}</span>
+        <span class="en">${soldout ? "Full" : "Book via WhatsApp"}</span>
+      </a>`;
+    grid.appendChild(card);
+  });
+  document.querySelectorAll(".js-wa").forEach(a => {
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      const day = a.dataset.d;
+      window.open(waLink(day, day), "_blank");
+    });
+  });
+}
+
+function igEmbed(url) {
+  const bq = document.createElement("blockquote");
+  bq.className = "instagram-media";
+  bq.setAttribute("data-instgrm-permalink", url);
+  bq.setAttribute("data-instgrm-version", "14");
+  bq.style.cssText = "background:#0a131c;width:100%;height:100%";
+  return bq;
+}
+
+function renderVideos() {
+  // Hero
+  if (HERO_REEL) {
+    const hv = document.getElementById("heroVideo");
+    hv.innerHTML = "";
+    hv.appendChild(igEmbed(HERO_REEL));
+  }
+  // Grid
+  const grid = document.getElementById("videoGrid");
+  grid.innerHTML = "";
+  STUDENT_VIDEOS.forEach(v => {
+    const card = document.createElement("div");
+    card.className = "v-card";
+    const slot = document.createElement("div");
+    slot.className = "v-slot";
+    if (v.url) slot.appendChild(igEmbed(v.url));
+    else slot.innerHTML = `<div class="ph"><div class="ph-icon">▶</div>
+      <div class="he"><b>מקום לסרטון</b><br>הדביקו לינק אינסטגרם ב-STUDENT_VIDEOS בראש הקובץ</div>
+      <div class="en"><b>Video slot</b><br>Paste an Instagram link in STUDENT_VIDEOS at the top of this file</div></div>`;
+    const tagHe = v.tag_he || (v.tag === "before" ? "לפני" : "אחרי");
+    const tagEn = v.tag_en || (v.tag === "before" ? "BEFORE" : "AFTER");
+    card.appendChild(slot);
+    card.insertAdjacentHTML("beforeend", `
+      <div class="v-meta">
+        <span class="v-tag ${v.tag}"><span class="he">${tagHe}</span><span class="en">${tagEn}</span></span>
+        <h3><span class="he">${v.name_he}</span><span class="en">${v.name_en}</span></h3>
+        <p><span class="he">${v.note_he}</span><span class="en">${v.note_en}</span></p>
+      </div>`);
+    grid.appendChild(card);
+  });
+  // Load Instagram embed script once if any URL exists
+  if (HERO_REEL || STUDENT_VIDEOS.some(v => v.url)) {
+    if (!document.getElementById("ig-embed-js")) {
+      const s = document.createElement("script");
+      s.id = "ig-embed-js"; s.async = true;
+      s.src = "https://www.instagram.com/embed.js";
+      document.body.appendChild(s);
+    } else if (window.instgrm) window.instgrm.Embeds.process();
+  }
+}
+
+function toggleLang() {
+  const html = document.documentElement;
+  const en = html.classList.toggle("lang-en");
+  html.setAttribute("dir", en ? "ltr" : "rtl");
+  html.setAttribute("lang", en ? "en" : "he");
+  document.getElementById("langBtn").textContent = en ? "עב" : "EN";
+}
+
+// Floating + footer WhatsApp — opens Omer's branded chat link
+function genericWa(e) {
+  e.preventDefault();
+  window.open(WHATSAPP_LINK, "_blank");
+}
+document.getElementById("waFloat").addEventListener("click", genericWa);
+document.getElementById("footerWa").addEventListener("click", genericWa);
+
+renderDates();
+renderVideos();
+</script>
+</body>
+</html>
