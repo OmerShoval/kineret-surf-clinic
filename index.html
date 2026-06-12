@@ -177,6 +177,31 @@ footer a{color:var(--foam);text-decoration:none}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:30px;height:30px;fill:#fff}
 
+/* ABOUT / CREDENTIALS */
+.about-bw{background:var(--deep)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-top:40px;align-items:start}
+.cred-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.cred-item{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--deep);border:1px solid rgba(94,196,238,.12);border-radius:14px;font-size:.97rem;color:var(--sand);line-height:1.45}
+.about-bw .cred-item{background:var(--ink)}
+.cred-icon{flex-shrink:0;font-size:1.4rem;width:38px;text-align:center}
+.ig-profile-card{max-width:300px;margin:0 auto;width:100%}
+.ig-grad-border{padding:2px;border-radius:calc(var(--radius) + 2px);background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.ig-card-inner{background:var(--deep);border-radius:var(--radius);padding:32px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.about-bw .ig-card-inner{background:var(--ink)}
+.ig-avatar{width:80px;height:80px;border-radius:50%;background:rgba(94,196,238,.08);display:flex;align-items:center;justify-content:center;font-size:2.2rem;border:2px solid rgba(94,196,238,.2)}
+.ig-handle{font-weight:900;font-size:1.1rem;color:var(--white)}
+.ig-note{color:var(--muted);font-size:.88rem;text-align:center;line-height:1.5}
+.ig-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#833ab4,#fd1d1d);color:var(--white);font-weight:700;padding:10px 24px;border-radius:99px;text-decoration:none;font-size:.88rem;transition:.2s;margin-top:4px}
+.ig-btn:hover{opacity:.85;transform:translateY(-2px)}
+
+/* COMBINATION */
+.combo{background:linear-gradient(180deg,var(--ocean) 0%,var(--deep) 100%);text-align:center}
+.combo-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px;text-align:start}
+.combo-card{background:rgba(255,255,255,.06);border:1px solid rgba(94,196,238,.18);border-radius:var(--radius);padding:28px 24px;display:flex;gap:18px;align-items:flex-start}
+.combo-icon{flex-shrink:0;width:50px;height:50px;border-radius:50%;background:rgba(30,136,199,.2);border:1px solid rgba(94,196,238,.25);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.combo-card h3{color:var(--white);font-size:1.05rem;margin-bottom:6px;font-weight:700}
+.combo-card p{color:var(--muted);font-size:.93rem;line-height:1.5}
+
 /* ====== scale up: tablet ====== */
 @media(min-width:480px){
   .nav-cta{display:inline-flex}
@@ -205,6 +230,9 @@ footer a{color:var(--foam);text-decoration:none}
   .t-time{font-size:1.2rem}
   .dates-grid{gap:22px;margin-top:44px}
   .info-grid{grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+  .about-grid{grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .ig-profile-card{max-width:none}
+  .combo-grid{grid-template-columns:repeat(3,1fr)}
 }
 </style>
 </head>
@@ -347,6 +375,155 @@ footer a{color:var(--foam);text-decoration:none}
         <h3 class="he">מקסימום 5 גולשים</h3><h3 class="en">5 surfers max</h3>
         <p class="he">קבוצה קטנה = יותר ראנים, יותר תשומת לב, יותר התקדמות. בלי קהל, בלי תור.</p>
         <p class="en">Small group = more runs, more attention, more progress. No crowd, no queue.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT OMER ============ -->
+<section id="about-omer">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">המאמן שלכם</p>
+      <h2 class="section-title">עומר שובל</h2>
+      <p class="lead">לא מאמן שלמד מספרים — מאמן שגלש, תחרה, ניצח ולימד ספורטאים ברמה הגבוהה ביותר.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Your coach</p>
+      <h2 class="section-title">Omer Shoval</h2>
+      <p class="lead">Not a coach who learned from books — one who surfed, competed, won, and trained athletes at the highest level.</p>
+    </div>
+    <div class="about-grid">
+      <ul class="cred-list">
+        <li class="cred-item">
+          <div class="cred-icon">🏄</div>
+          <div><span class="he">חבר נבחרת ישראל בוייקסרף</span><span class="en">Israel Wakesurf National Team member</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">🥈</div>
+          <div><span class="he">סגן אלוף ישראל בשורטבורד — 2019</span><span class="en">Israeli Shortboard Surfing Runner-Up — 2019</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">🇮🇱</div>
+          <div><span class="he">ספורטאי מקצועי בגלישה — צה"ל</span><span class="en">Professional Sportsman in Surfing — IDF</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">🌍</div>
+          <div><span class="he">מדורג בטופ 150 גולשי לונגבורד בעולם</span><span class="en">Top 150 ranked longboard surfer in the world</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">📋</div>
+          <div><span class="he">13 שנות ניסיון בהוראת גלישה ברחבי העולם — מגוון גישות ושיטות</span><span class="en">13 years coaching surfing worldwide across multiple disciplines</span></div>
+        </li>
+      </ul>
+      <div class="ig-profile-card">
+        <div class="ig-grad-border">
+          <div class="ig-card-inner">
+            <div class="ig-avatar">🏄</div>
+            <div class="ig-handle"><span style="color:var(--foam)">@</span>omer_shoval</div>
+            <p class="ig-note">
+              <span class="he">תמונות, סרטונים ועדכונים מהמים</span>
+              <span class="en">Photos, videos and updates from the water</span>
+            </p>
+            <a class="ig-btn" href="https://www.instagram.com/omer_shoval/" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span class="he">עקבו באינסטגרם</span>
+              <span class="en">Follow on Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT BLUE WAKE ============ -->
+<section id="about-bw" class="about-bw">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">שותף הסירה</p>
+      <h2 class="section-title">Blue Wake Club</h2>
+      <p class="lead">לא סתם ספינן — הצוות שהפך את הוייקסרף לספורט בישראל, עם ניסיון ותשתית שאין שני לה.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Boat partner</p>
+      <h2 class="section-title">Blue Wake Club</h2>
+      <p class="lead">Not just a driver — the team that put wakesurf on the map in Israel, with experience and infrastructure second to none.</p>
+    </div>
+    <div class="about-grid">
+      <ul class="cred-list">
+        <li class="cred-item">
+          <div class="cred-icon">🏆</div>
+          <div><span class="he">מעל 10 שנות פעילות בספורט המים — בתחומים מגוונים</span><span class="en">Over 10 years operating in water sports across multiple fields</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">🌊</div>
+          <div><span class="he">חלוצי הוייקסרף בישראל</span><span class="en">Pioneers of wake surfing in Israel</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">⛵</div>
+          <div><span class="he">מעל 15 שנות ניסיון בהנעת סירות עם ספורטאים מקצועיים</span><span class="en">Over 15 years of driving experience with professional athletes</span></div>
+        </li>
+        <li class="cred-item">
+          <div class="cred-icon">📜</div>
+          <div><span class="he">ביטוח ורישיונות לספורט מים — כחוק</span><span class="en">Full insurance and licenses for water sports — by the book</span></div>
+        </li>
+      </ul>
+      <div class="ig-profile-card">
+        <div class="ig-grad-border">
+          <div class="ig-card-inner">
+            <div class="ig-avatar">⛵</div>
+            <div class="ig-handle"><span style="color:var(--foam)">@</span>bluewakeclub</div>
+            <p class="ig-note">
+              <span class="he">חדשות, סרטונים ועדכונים מהמועדון</span>
+              <span class="en">News, videos and updates from the club</span>
+            </p>
+            <a class="ig-btn" href="https://www.instagram.com/bluewakeclub/" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span class="he">עקבו באינסטגרם</span>
+              <span class="en">Follow on Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE COMBINATION ============ -->
+<section class="combo" id="combo">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">השותפות</p>
+      <h2 class="section-title">שני מקצוענים. מטרה אחת.</h2>
+      <p class="lead" style="margin:0 auto">עומר ו-Blue Wake — כל אחד אלוף בתחומו. ביחד הם מייצרים את הסביבה המושלמת להתקדמות.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The partnership</p>
+      <h2 class="section-title">Two professionals. One goal.</h2>
+      <p class="lead" style="margin:0 auto">Omer and Blue Wake — each a champion in their field. Together they create the perfect environment for progress.</p>
+    </div>
+    <div class="combo-grid">
+      <div class="combo-card">
+        <div class="combo-icon">🤝</div>
+        <div>
+          <h3><span class="he">מקצוענים שמחברים כוחות</span><span class="en">Professionals combining forces</span></h3>
+          <p><span class="he">כל אחד מביא עשור ויותר של מומחיות בתחומו — ביחד הם מייצרים חוויה שאי אפשר לקבל אחרת.</span><span class="en">Each bringing over a decade of expertise in their domain — together creating an experience you can't get anywhere else.</span></p>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-icon">⛵</div>
+        <div>
+          <h3><span class="he">הנהג שומר עליכם</span><span class="en">The driver keeps you safe</span></h3>
+          <p><span class="he">הנהג מבין את תנועת הגוף שלכם ומתאים את המהירות ואת זרימת הסירה — כדי שתהיו תמיד בעמדה הנכונה על הגל.</span><span class="en">The driver reads your body movement and adjusts speed and boat flow — so you're always in the right position on the wave.</span></p>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-icon">🎯</div>
+        <div>
+          <h3><span class="he">המאמן מוביל להצלחה</span><span class="en">The coach leads you to success</span></h3>
+          <p><span class="he">עומר שומר עליכם במצב זרימה ומנחה כל שנייה על הגל — בסביבה בטוחה שמאפשרת ללחוץ גבולות בלי פחד.</span><span class="en">Omer keeps you in flow state and guides every second on the wave — in a safe environment that lets you push limits without fear.</span></p>
+        </div>
       </div>
     </div>
   </div>
