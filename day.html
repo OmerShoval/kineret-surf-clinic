@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>לפני הקליניק — כל מה שצריך לדעת | Omer Shoval Surf Clinic</title>
+<meta name="description" content="כל מה שצריך לדעת לפני יום הקליניק בכנרת: הגעה וניווט, חניה, מה להביא, איך נראה היום ומה לוח הזמנים.">
+<meta property="og:title" content="לפני הקליניק — כל מה שצריך לדעת">
+<meta property="og:description" content="ניווט, חניה, מה להביא ולוח הזמנים המלא של יום הקליניק בכנרת.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kineret-surf.vercel.app/day">
+<meta property="og:locale" content="he_IL">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🏄</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Archivo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1620;
+  --deep:#0e2233;
+  --ocean:#11405e;
+  --wave:#1e88c7;
+  --foam:#5ec4ee;
+  --sand:#f4efe7;
+  --white:#ffffff;
+  --gold:#e8b34b;
+  --muted:#7d96a8;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;background:var(--ink);color:var(--sand);line-height:1.6;overflow-x:hidden}
+[dir="ltr"] body{font-family:'Archivo','Heebo',sans-serif}
+.en{display:none}
+html.lang-en .he{display:none}
+html.lang-en .en{display:block}
+html.lang-en span.en,html.lang-en i.en{display:inline}
+html.lang-en a.en{display:inline-flex}
+span.en,a.en,i.en{display:none}
+html.lang-en span.he,html.lang-en a.he,html.lang-en i.he{display:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+h1,h2,h3{font-weight:900;line-height:1.15}
+section{padding:56px 0}
+.kicker{color:var(--foam);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+.section-title{font-size:clamp(1.8rem,4.5vw,2.8rem);margin-bottom:18px}
+.lead{color:var(--muted);font-size:1.1rem;max-width:640px}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(11,22,32,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(94,196,238,.12)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:58px;gap:10px}
+.logo{font-weight:900;font-size:.85rem;letter-spacing:.04em;color:var(--white);text-decoration:none;white-space:nowrap}
+.logo b{color:var(--foam)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang-btn{background:none;border:1px solid rgba(94,196,238,.35);color:var(--foam);padding:6px 14px;border-radius:99px;cursor:pointer;font-family:inherit;font-weight:700;font-size:.85rem}
+.lang-btn:hover{background:rgba(94,196,238,.12)}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:48px;background:var(--wave);color:var(--white);font-weight:700;padding:11px 28px;border-radius:99px;text-decoration:none;transition:.2s;border:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--foam);color:var(--ink);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:#f5c869;color:var(--ink)}
+.btn-sm{padding:7px 18px;font-size:.88rem;min-height:40px}
+.nav-cta{display:none}
+
+/* PAGE HERO */
+.phero{padding:110px 0 50px;background:
+  radial-gradient(ellipse 80% 60% at 70% 10%,rgba(30,136,199,.25),transparent),
+  radial-gradient(ellipse 60% 50% at 20% 90%,rgba(17,64,94,.5),transparent),
+  var(--ink)}
+.phero h1{font-size:clamp(2.1rem,5.5vw,3.4rem);color:var(--white);margin-bottom:18px;max-width:820px}
+.phero h1 em{font-style:normal;color:var(--foam)}
+.phero .sub{font-size:1.05rem;color:var(--muted);max-width:600px;margin-bottom:28px}
+.quick-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.qn{background:rgba(94,196,238,.1);border:1px solid rgba(94,196,238,.3);color:var(--foam);padding:9px 18px;border-radius:99px;font-weight:700;font-size:.9rem;text-decoration:none;transition:.2s}
+.qn:hover{background:rgba(94,196,238,.2);transform:translateY(-2px)}
+
+/* GETTING THERE */
+.arrive{background:var(--deep)}
+.arrive-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:36px}
+.nav-card{background:var(--ink);border:1px solid rgba(94,196,238,.15);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.nav-card h3{color:var(--white);font-size:1.15rem}
+.nav-card p{color:var(--muted);font-size:.95rem}
+.waze-btn{display:inline-flex;align-items:center;gap:12px;background:#33CCFF;color:#0b1620;font-weight:900;padding:13px 26px;border-radius:99px;text-decoration:none;font-size:1rem;transition:.2s;min-height:52px;margin-top:auto}
+.waze-btn:hover{background:#5cd8ff;transform:translateY(-2px)}
+.waze-btn svg{width:26px;height:26px;flex-shrink:0}
+.park-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(232,179,75,.14);border:1px solid rgba(232,179,75,.4);color:var(--gold);font-weight:700;padding:10px 18px;border-radius:12px;font-size:.92rem}
+
+/* TIMELINE */
+.timeline{margin-top:44px;display:grid;gap:0}
+.t-row{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:20px 0;border-top:1px solid rgba(125,150,168,.14)}
+.t-row:last-child{border-bottom:1px solid rgba(125,150,168,.14)}
+.t-time{font-family:'Archivo',sans-serif;font-weight:900;color:var(--foam);font-size:1.05rem}
+.t-row h3{color:var(--white);font-size:1.05rem;margin-bottom:4px}
+.t-row p{color:var(--muted);font-size:.95rem}
+.t-row.hi .t-time{color:var(--gold)}
+
+/* ROTATION EXPLAINER */
+.rot{background:var(--deep)}
+.rot-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:36px}
+.rot-card{background:var(--ink);border:1px solid rgba(94,196,238,.14);border-radius:var(--radius);padding:26px 22px}
+.rot-card .n{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.2rem;color:rgba(94,196,238,.35);line-height:1}
+.rot-card h3{color:var(--white);font-size:1.05rem;margin:14px 0 8px}
+.rot-card p{color:var(--muted);font-size:.93rem}
+.group-note{margin-top:28px;display:grid;grid-template-columns:1fr;gap:14px}
+.gn{background:var(--ink);border:1px solid rgba(125,150,168,.18);border-radius:14px;padding:22px 24px;display:flex;align-items:center;gap:18px}
+.gn .gn-num{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.9rem;color:var(--gold);line-height:1;flex-shrink:0}
+.gn h4{color:var(--white);font-size:1rem;font-weight:700;margin-bottom:2px}
+.gn p{color:var(--muted);font-size:.9rem}
+
+/* BRING */
+.bring-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:36px}
+.b-item{background:var(--deep);border:1px solid rgba(94,196,238,.12);border-radius:14px;padding:22px 24px;display:flex;gap:18px;align-items:flex-start}
+.b-icon{flex-shrink:0;font-size:1.7rem;width:44px;text-align:center;line-height:1.3}
+.b-item h3{color:var(--white);font-size:1.02rem;margin-bottom:5px}
+.b-item p{color:var(--muted);font-size:.93rem}
+.b-item.key{border-color:rgba(232,179,75,.45);background:rgba(232,179,75,.07)}
+.b-item.key h3{color:var(--gold)}
+
+/* ON TIME */
+.ontime{background:linear-gradient(180deg,var(--deep),var(--ocean));text-align:center}
+.ontime h2{font-size:clamp(1.8rem,4.5vw,2.8rem);color:var(--white);max-width:760px;margin:0 auto 18px}
+.ontime h2 em{font-style:normal;color:var(--gold)}
+.ontime .lead{margin:0 auto}
+.clockbox{display:inline-flex;align-items:center;gap:14px;background:rgba(232,179,75,.14);border:1px solid rgba(232,179,75,.45);border-radius:99px;padding:14px 30px;margin-top:32px}
+.clockbox .big{font-family:'Archivo',sans-serif;font-weight:900;font-size:2rem;color:var(--gold);line-height:1}
+.clockbox span{color:var(--sand);font-weight:700;font-size:.98rem;text-align:start}
+
+/* STATS */
+.stats-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+.s-card{background:var(--deep);border:1px solid rgba(125,150,168,.16);border-radius:var(--radius);padding:30px 24px}
+.s-card .place{color:var(--white);font-size:1.08rem;font-weight:900;margin-bottom:16px}
+.s-card .stat{font-family:'Archivo',sans-serif;font-size:clamp(1.9rem,5vw,2.7rem);font-weight:900;color:var(--foam);line-height:1}
+.s-card .stat-label{color:var(--muted);font-size:.93rem;margin-top:8px}
+.s-card .cost{color:var(--muted);font-size:.87rem;margin-top:16px;padding-top:14px;border-top:1px solid rgba(125,150,168,.14)}
+.s-card.hot{border-color:var(--gold);position:relative;background:var(--ocean)}
+.s-card.hot::before{content:attr(data-tag);position:absolute;top:-13px;inset-inline-start:26px;background:var(--gold);color:var(--ink);font-weight:900;font-size:.74rem;padding:4px 14px;border-radius:99px;letter-spacing:.08em}
+.s-card.hot .stat{color:var(--gold)}
+.s-card.hot .place{color:var(--white)}
+.stats-foot{margin-top:32px;text-align:center;color:var(--muted);font-size:.95rem;max-width:700px;margin-inline:auto}
+.stats-foot b{color:var(--foam)}
+
+/* GROUPS */
+.groups{background:var(--deep)}
+.g-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:36px}
+.g-card{background:var(--ink);border:1px solid rgba(37,211,102,.25);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.g-card h3{color:var(--white);font-size:1.08rem}
+.g-card p{color:var(--muted);font-size:.93rem}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#08240f;font-weight:900;padding:12px 24px;border-radius:99px;text-decoration:none;font-size:.95rem;transition:.2s;min-height:50px;margin-top:auto}
+.wa-btn:hover{background:#4ce383;transform:translateY(-2px)}
+.wa-btn svg{width:22px;height:22px;fill:#08240f;flex-shrink:0}
+
+/* FAQ */
+.info-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:36px}
+.faq-item{background:var(--deep);border:1px solid rgba(125,150,168,.14);border-radius:14px;padding:24px}
+.faq-item h3{color:var(--white);font-size:1.02rem;margin-bottom:8px}
+.faq-item h3::before{content:"//";color:var(--foam);margin-inline-end:8px;font-family:'Archivo',sans-serif}
+.faq-item p{color:var(--muted);font-size:.95rem}
+
+/* FINAL */
+.final{text-align:center;background:
+  radial-gradient(ellipse 70% 80% at 50% 100%,rgba(30,136,199,.3),transparent),var(--ink)}
+.final h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--white);max-width:760px;margin:0 auto 20px}
+.final h2 em{font-style:normal;color:var(--gold)}
+.final .lead{margin:0 auto 36px}
+
+footer{border-top:1px solid rgba(125,150,168,.15);padding:36px 0;text-align:center;color:var(--muted);font-size:.88rem}
+footer a{color:var(--foam);text-decoration:none}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom));inset-inline-end:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+@media(min-width:480px){ .nav-cta{display:inline-flex} }
+@media(min-width:640px){
+  .arrive-grid{grid-template-columns:1fr 1fr}
+  .bring-grid{grid-template-columns:1fr 1fr}
+  .g-grid{grid-template-columns:1fr 1fr}
+  .group-note{grid-template-columns:1fr 1fr}
+}
+@media(min-width:880px){
+  .wrap{padding:0 22px}
+  section{padding:88px 0}
+  .nav-inner{height:64px}
+  .logo{font-size:1.05rem}
+  .phero{padding:150px 0 70px}
+  .phero .sub{font-size:1.15rem}
+  .t-row{grid-template-columns:110px 1fr;gap:24px;padding:22px 0}
+  .t-time{font-size:1.2rem}
+  .rot-grid{grid-template-columns:repeat(4,1fr);gap:18px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .info-grid{grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="/">OMER SHOVAL <b>// SURF CLINIC</b></a>
+    <div class="nav-actions">
+      <button class="lang-btn" onclick="toggleLang()" id="langBtn">EN</button>
+      <a class="btn btn-sm nav-cta" href="#waze"><span class="he">ניווט לחוף</span><span class="en">Navigate</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="phero" id="top">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">לפני היום // כנרת // חוף סירות מגדל</p>
+      <h1>כל מה שצריך לדעת <em>לפני שאנחנו עולים על הסירה.</em></h1>
+      <p class="sub">קראו את הדף הזה פעם אחת, בשקט, לפני היום. הוא לוקח שלוש דקות — והוא ההבדל בין בוקר שמתחיל בלחץ לבוקר שמתחיל על המים.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Before the day // Sea of Galilee // Migdal Boats Beach</p>
+      <h1>Everything you need to know <em>before we step on the boat.</em></h1>
+      <p class="sub">Read this page once, calmly, before the day. It takes three minutes — and it's the difference between a morning that starts stressed and one that starts on the water.</p>
+    </div>
+    <div class="quick-nav">
+      <a class="qn he" href="#waze">ניווט וחניה</a><a class="qn en" href="#waze">Directions &amp; parking</a>
+      <a class="qn he" href="#schedule">לוח הזמנים</a><a class="qn en" href="#schedule">The schedule</a>
+      <a class="qn he" href="#bring">מה להביא</a><a class="qn en" href="#bring">What to bring</a>
+      <a class="qn he" href="#stats">קצת מספרים</a><a class="qn en" href="#stats">The numbers</a>
+      <a class="qn he" href="#groups">קבוצות וואטסאפ</a><a class="qn en" href="#groups">WhatsApp groups</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ GETTING THERE ============ -->
+<section class="arrive" id="waze">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">הגעה</p>
+      <h2 class="section-title">ניווט וחניה</h2>
+      <p class="lead">שמרו את הלינק עכשיו, לא בבוקר של היום. הקליטה באזור לא תמיד מושלמת.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Getting there</p>
+      <h2 class="section-title">Directions &amp; parking</h2>
+      <p class="lead">Save the link now, not on the morning itself. Reception around the beach isn't always perfect.</p>
+    </div>
+
+    <div class="arrive-grid">
+      <div class="nav-card">
+        <h3 class="he">נווטו ישירות לנקודת המפגש</h3>
+        <h3 class="en">Navigate straight to the meeting point</h3>
+        <p class="he">הלינק פותח את הנקודה המדויקת בוויז. תכננו להגיע ב-7:50 — כלומר לצאת עם מרווח לפקקים ולחניה.</p>
+        <p class="en">This link opens the exact spot in Waze. Plan to arrive at 7:50 — which means leaving with a buffer for traffic and parking.</p>
+        <a class="waze-btn" href="https://waze.com/ul/hsvc6b0kn4" target="_blank" rel="noopener">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#0b1620" d="M24 5C13.5 5 5 12.6 5 22c0 4.6 2 8.8 5.3 11.8-.3 2-1.3 3.9-2.8 5.3-.6.6-.3 1.6.6 1.7 3.6.4 7.1-.9 9.6-3.3 1.9.5 3.9.7 6 .7 10.5 0 19-7.6 19-17S34.5 5 24 5z"/>
+            <circle fill="#33CCFF" cx="18.5" cy="20" r="2.6"/>
+            <circle fill="#33CCFF" cx="29.5" cy="20" r="2.6"/>
+            <path fill="none" stroke="#0b1620" stroke-width="2.4" stroke-linecap="round" d="M17.5 27.5c1.7 2.2 4 3.3 6.5 3.3s4.8-1.1 6.5-3.3"/>
+          </svg>
+          <span class="he">פתחו בוויז</span><span class="en">Open in Waze</span>
+        </a>
+      </div>
+
+      <div class="nav-card">
+        <h3 class="he">החניה בתשלום</h3>
+        <h3 class="en">Parking is paid</h3>
+        <p class="he">החניה בחוף היא חניה בתשלום. הפעילו פנגו ברגע שחניתם — לפני שאתם הולכים לסירה. אנחנו לא נעצור באמצע היום בשביל זה.</p>
+        <p class="en">Parking at the beach is paid. Start Pango the moment you park — before you walk down to the boat. We're not stopping mid-day for it.</p>
+        <div class="park-badge">
+          <span>🅿️</span>
+          <span class="he">הפעילו פנגו מיד עם החניה</span>
+          <span class="en">Start Pango as soon as you park</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">איך נראה היום</p>
+      <h2 class="section-title">לוח הזמנים</h2>
+      <p class="lead">שעה מלאה של גלישה לכל אחד — מפוצלת לסטים קצרים עם פידבק וידאו ביניהם. ככה השרירים נשארים טריים והראש נשאר חד.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">How the day looks</p>
+      <h2 class="section-title">The schedule</h2>
+      <p class="lead">A full hour of surfing each — split into short sets with video feedback in between. That's how your muscles stay fresh and your head stays sharp.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-row">
+        <div class="t-time">07:50</div>
+        <div>
+          <h3 class="he">נפגשים בחוף</h3>
+          <h3 class="en">Meet at the beach</h3>
+          <p class="he">חניתם, הפעלתם פנגו, ואתם בנקודת המפגש עם כל הציוד שלכם. לא בדרך — נמצאים.</p>
+          <p class="en">Parked, Pango running, and standing at the meeting point with all your gear. Not on the way — there.</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time">08:00</div>
+        <div>
+          <h3 class="he">הולכים לסירה</h3>
+          <h3 class="en">Walk to the boat</h3>
+          <p class="he">לוקחים את כל הציוד ויורדים לרציף ביחד. עולים, מסדרים, ותדריך בטיחות קצר.</p>
+          <p class="en">We take everything and head down to the dock together. Board, settle in, short safety briefing.</p>
+        </div>
+      </div>
+      <div class="t-row hi">
+        <div class="t-time">08:30</div>
+        <div>
+          <h3 class="he">מתחילים לגלוש</h3>
+          <h3 class="en">Surfing starts</h3>
+          <p class="he">הרוטציות מתחילות. סט של כ-7 דקות על הגל, יורדים, צופים בווידאו ומקבלים פידבק — ואז שוב, ושוב, כמה שיותר פעמים.</p>
+          <p class="en">Rotations begin. A set of about 7 minutes on the wave, then off, watch the video and get feedback — then again, and again, as many rounds as we can fit.</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time" id="endTime">11:30</div>
+        <div>
+          <h3 class="he">חוזרים לחוף</h3>
+          <h3 class="en">Back to the beach</h3>
+          <p class="he">שעה מלאה לכל גולש — שעת הסיום נקבעת לפי גודל הקבוצה (ראו למטה).</p>
+          <p class="en">A full hour per surfer — the finish time depends on the group size (see below).</p>
+        </div>
+      </div>
+      <div class="t-row">
+        <div class="t-time">+15</div>
+        <div>
+          <h3 class="he">סיכום על החוף</h3>
+          <h3 class="en">Wrap-up on the sand</h3>
+          <p class="he">סיכום קצר ביחד: מה עבד, מה השתנה מהסט הראשון לאחרון, ועל מה כדאי לעבוד עד הפעם הבאה.</p>
+          <p class="en">A short debrief together: what worked, what changed from your first set to your last, and what to work on before next time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROTATIONS ============ -->
+<section class="rot" id="rotations">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">המבנה</p>
+      <h2 class="section-title">שעה. מפוצלת נכון.</h2>
+      <p class="lead">אף אחד לא גולש שעה ברצף — הגוף לא יחזיק והלמידה תיעצר. אנחנו מפצלים אותה לסטים, ובין סט לסט אתם רואים את עצמכם.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The structure</p>
+      <h2 class="section-title">One hour. Split the right way.</h2>
+      <p class="lead">Nobody surfs an hour straight — the body won't hold and the learning stops. We split it into sets, and between each one you watch yourself.</p>
+    </div>
+
+    <div class="rot-grid">
+      <div class="rot-card">
+        <div class="n">01</div>
+        <h3 class="he">סט של 7 דקות</h3>
+        <h3 class="en">A 7-minute set</h3>
+        <p class="he">אתם על הגל, אני 3 מטר ממכם עם רמקול — תיקונים בזמן אמת, לא אחרי.</p>
+        <p class="en">You're on the wave, I'm 3 meters away with a speaker — corrections in real time, not after.</p>
+      </div>
+      <div class="rot-card">
+        <div class="n">02</div>
+        <h3 class="he">וידאו ופידבק</h3>
+        <h3 class="en">Video &amp; feedback</h3>
+        <p class="he">יורדים, צופים בהקלטה מיד, ובוחרים דבר אחד לתקן בסט הבא. דבר אחד — לא חמישה.</p>
+        <p class="en">You come off, watch the footage right away, and pick one thing to fix next set. One thing — not five.</p>
+      </div>
+      <div class="rot-card">
+        <div class="n">03</div>
+        <h3 class="he">מנוחה בזמן שאחרים גולשים</h3>
+        <h3 class="en">Rest while others surf</h3>
+        <p class="he">זה הזמן לשתות, לאכול משהו קטן, ולראות את השאר — לומדים המון גם מלצפות.</p>
+        <p class="en">Time to drink, eat something small, and watch the others — you learn a lot just from watching.</p>
+      </div>
+      <div class="rot-card">
+        <div class="n">04</div>
+        <h3 class="he">ושוב</h3>
+        <h3 class="en">And again</h3>
+        <p class="he">חוזרים על המחזור כמה שיותר פעמים, עד שהשעה שלכם מלאה.</p>
+        <p class="en">We repeat the cycle as many times as possible, until your hour is complete.</p>
+      </div>
+    </div>
+
+    <div class="group-note">
+      <div class="gn">
+        <div class="gn-num">3</div>
+        <div>
+          <h4 class="he">שלושה גולשים — מסיימים ב-11:30</h4>
+          <h4 class="en">Three surfers — we finish at 11:30</h4>
+          <p class="he">שלושה זה המינימום ליציאה. 3 שעות מים, שעה לכל אחד.</p>
+          <p class="en">Three is the minimum to go out. 3 hours on the water, an hour each.</p>
+        </div>
+      </div>
+      <div class="gn">
+        <div class="gn-num">4</div>
+        <div>
+          <h4 class="he">ארבעה גולשים — מסיימים ב-12:30</h4>
+          <h4 class="en">Four surfers — we finish at 12:30</h4>
+          <p class="he">4 שעות מים. שעה לכל אחד, בדיוק כמו קבוצה קטנה יותר.</p>
+          <p class="en">4 hours on the water. An hour each, exactly like a smaller group.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT TO BRING ============ -->
+<section id="bring">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">הציוד שלכם</p>
+      <h2 class="section-title">מה להביא</h2>
+      <p class="lead">רשימה קצרה. עברו עליה בערב שלפני, לא בבוקר.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Your gear</p>
+      <h2 class="section-title">What to bring</h2>
+      <p class="lead">A short list. Go through it the night before, not in the morning.</p>
+    </div>
+
+    <div class="bring-grid">
+      <div class="b-item key">
+        <div class="b-icon">🏄</div>
+        <div>
+          <h3 class="he">הגלשן שלכם</h3>
+          <h3 class="en">Your own surfboard</h3>
+          <p class="he">הביאו את הגלשן שאתם הכי גולשים איתו — זה שאתם מכירים ומרגישים איתו בבית. יש לכם שאלה איזה גלשן להביא? כתבו לי לפני, בשמחה אעזור.</p>
+          <p class="en">Bring the board you surf with most — the one you know and feel at home on. Not sure which to bring? Message me beforehand, happy to help.</p>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="b-icon">💧</div>
+        <div>
+          <h3 class="he">בקבוק מים</h3>
+          <h3 class="en">A water bottle</h3>
+          <p class="he">בוקר של יולי על הכנרת. קחו בקבוק גדול, ותשתו בין הסטים — לא רק כשצמא.</p>
+          <p class="en">A July morning on the Sea of Galilee. Bring a big bottle and drink between sets — not only when you're thirsty.</p>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="b-icon">🍉</div>
+        <div>
+          <h3 class="he">פירות ואוכל קליל</h3>
+          <h3 class="en">Fruit &amp; light food</h3>
+          <p class="he">פירות, אגוזים, חטיף אנרגיה. משהו שאפשר לנשנש בין רוטציות בלי להרגיש כבד על המים.</p>
+          <p class="en">Fruit, nuts, an energy bar. Something you can snack on between rotations without feeling heavy on the water.</p>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="b-icon">🧴</div>
+        <div>
+          <h3 class="he">קרם הגנה, כובע ומגבת</h3>
+          <h3 class="en">Sunscreen, hat &amp; towel</h3>
+          <p class="he">מרחו לפני שיוצאים מהבית ושוב על הסירה. השמש על המים חזקה פי שניים ממה שהיא מרגישה.</p>
+          <p class="en">Apply before you leave home and again on the boat. The sun on the water is twice as strong as it feels.</p>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="b-icon">👕</div>
+        <div>
+          <h3 class="he">בגד ים ובגדים יבשים להחלפה</h3>
+          <h3 class="en">Swimwear &amp; dry clothes</h3>
+          <p class="he">בואו כבר עם בגד ים, וקחו סט יבש לדרך הביתה. גם ראש גארד או חולצת ליקרה זה רעיון מצוין.</p>
+          <p class="en">Arrive already in your swimwear, and bring a dry set for the drive home. A rash guard is a great idea too.</p>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="b-icon">🕶️</div>
+        <div>
+          <h3 class="he">משקפי שמש ומצב רוח טוב</h3>
+          <h3 class="en">Sunglasses &amp; good energy</h3>
+          <p class="he">הרבה מהיום זה לצפות באחרים גולשים. תיהנו מזה — הקבוצה עושה את היום לא פחות מהגל.</p>
+          <p class="en">A lot of the day is watching others surf. Enjoy it — the group makes the day as much as the wave does.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ON TIME ============ -->
+<section class="ontime" id="ontime">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">הדבר הכי חשוב בדף הזה</p>
+      <h2>אם אחד מאחר — <em>כולם מאחרים.</em></h2>
+      <p class="lead">הסירה לא יכולה לעזוב את הרציף בלי כולם. כל דקה של איחור היא דקה שנגרעת מזמן המים של כל אחד ואחת בקבוצה — כולל שלכם. תהיו שחקני קבוצה. תגיעו בזמן.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The most important thing on this page</p>
+      <h2>If one person is late — <em>everyone is late.</em></h2>
+      <p class="lead">The boat cannot leave the dock without everyone. Every minute of delay comes straight out of the water time of every single person in the group — yours included. Be a team player. Be on time.</p>
+    </div>
+    <div class="clockbox">
+      <div class="big">07:50</div>
+      <span class="he">בחוף. לא בדרך.</span>
+      <span class="en">At the beach. Not on the way.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section id="stats">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">קצת מספרים</p>
+      <h2 class="section-title">כמה זמן אתם באמת עומדים על גל?</h2>
+      <p class="lead">גלישה בים היא ספורט של המתנה. חתירה החוצה, חיפוש הפוזיציה, המתנה לסט, ואז — שניות ספורות של גלישה. הנה איך זה נראה במספרים.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">The numbers</p>
+      <h2 class="section-title">How long are you actually standing on a wave?</h2>
+      <p class="lead">Ocean surfing is a sport of waiting. Paddle out, find position, wait for the set, and then — a few seconds of riding. Here's what that looks like in numbers.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="s-card">
+        <div class="place he">14–20 ימי גלישה בישראל</div>
+        <div class="place en">14–20 surf days in Israel</div>
+        <div class="stat">30<span style="font-size:.5em"> </span>—<span style="font-size:.5em"> </span>2.5</div>
+        <div class="stat-label he">שניות עד דקות של עמידה על הגל — בסך הכל, על פני כל הימים האלה</div>
+        <div class="stat-label en">seconds to minutes of standing on the wave — in total, across all those days</div>
+        <div class="cost he">שבועיים-שלושה של קימה מוקדמת, נסיעות וצ׳ק של תחזיות.</div>
+        <div class="cost en">Two to three weeks of early alarms, driving and checking forecasts.</div>
+      </div>
+
+      <div class="s-card">
+        <div class="place he">טריפ לאנגולה, מנטאווי או הפיליפינים</div>
+        <div class="place en">A trip to Angola, the Mentawais or the Philippines</div>
+        <div class="stat">5–15</div>
+        <div class="stat-label he">דקות עמידה על הגל לאורך כל הטריפ, תלוי ברמה שלכם</div>
+        <div class="stat-label en">minutes standing on the wave across the whole trip, depending on your level</div>
+        <div class="cost he">טיסות, לינה, ימים שלמים — בשביל דקות בודדות.</div>
+        <div class="cost en">Flights, accommodation, entire days — for a handful of minutes.</div>
+      </div>
+
+      <div class="s-card hot" data-tag="THE CLINIC">
+        <div class="place he">בוקר אחד בכנרת. שעה אחת שלכם.</div>
+        <div class="place en">One morning on the Kinneret. One hour that's yours.</div>
+        <div class="stat">20–50</div>
+        <div class="stat-label he">דקות של עמידה בפועל על הגל — באותו בוקר</div>
+        <div class="stat-label en">minutes actually standing on the wave — that same morning</div>
+        <div class="cost he">בלי חתירה, בלי המתנה לסט, בלי תחזית. הגל פשוט שם.</div>
+        <div class="cost en">No paddling, no waiting for a set, no forecast. The wave is simply there.</div>
+      </div>
+    </div>
+
+    <p class="stats-foot he">כלומר: בוקר אחד כאן שווה בערך <b>מה שתיקחו משנה שלמה של גלישה בים בישראל</b> — ויותר מטריפ גלישה בחו״ל. וכל דקה מהן מצולמת, מנותחת ומתוקנת בזמן אמת.</p>
+    <p class="stats-foot en">In other words: one morning here is worth roughly <b>what you'd take from a full year of ocean surfing in Israel</b> — and more than an overseas surf trip. And every one of those minutes is filmed, analyzed and corrected in real time.</p>
+  </div>
+</section>
+
+<!-- ============ GROUPS ============ -->
+<section class="groups" id="groups">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">נשארים בקשר</p>
+      <h2 class="section-title">קבוצות הוואטסאפ</h2>
+      <p class="lead">הצטרפו לשתיהן עכשיו. עדכונים אחרונים לפני היום עולים לקבוצת היום.</p>
+    </div>
+    <div class="en">
+      <p class="kicker">Staying in touch</p>
+      <h2 class="section-title">The WhatsApp groups</h2>
+      <p class="lead">Join both now. Last-minute updates before the day go to the day group.</p>
+    </div>
+
+    <div class="g-grid">
+      <div class="g-card">
+        <h3 class="he">קבוצת יום הקליניק</h3>
+        <h3 class="en">The clinic day group</h3>
+        <p class="he">כל מה שקשור ליום עצמו: עדכוני שעות, מזג אוויר, תיאומים של הרגע האחרון והתמונות והסרטונים אחרי.</p>
+        <p class="en">Everything about the day itself: timing updates, weather, last-minute coordination, and the photos and clips afterwards.</p>
+        <a class="wa-btn" href="https://chat.whatsapp.com/GFl61c1MUooA4BYHaJ03Lp?s=cl&amp;p=i&amp;ilr=1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <span class="he">הצטרפו לקבוצת היום</span><span class="en">Join the day group</span>
+        </a>
+      </div>
+
+      <div class="g-card">
+        <h3 class="he">קהילת הגלישה — פעילויות נוספות</h3>
+        <h3 class="en">The surf community — more activities</h3>
+        <p class="he">הקבוצה הכללית שלי: קליניקים נוספים, ימי גלישה, אימונים ומפגשים. כאן תדעו ראשונים על מה שבא.</p>
+        <p class="en">My general community: more clinics, surf days, training sessions and meetups. This is where you hear about what's next, first.</p>
+        <a class="wa-btn" href="https://chat.whatsapp.com/CsPLNxSgw4sA4JVtLP4ACm?s=cl&amp;p=i&amp;ilr=1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <span class="he">הצטרפו לקהילה</span><span class="en">Join the community</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="he">
+      <p class="kicker">שאלות אחרונות</p>
+      <h2 class="section-title">לפני שאתם יוצאים מהבית</h2>
+    </div>
+    <div class="en">
+      <p class="kicker">Last questions</p>
+      <h2 class="section-title">Before you leave the house</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="faq-item">
+        <h3 class="he">מזג האוויר?</h3>
+        <h3 class="en">The weather?</h3>
+        <p class="he">התחזית נראית מעולה. תתכוננו ליום פנטסטי על המים. אם משהו משתנה — תדעו ראשונים בקבוצת היום.</p>
+        <p class="en">The forecast looks incredible. Get ready for a fantastic day on the water. If anything changes, you'll hear it first in the day group.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">אין לי גלשן ווייקסרף מתאים</h3>
+        <h3 class="en">I don't have a proper wakesurf board</h3>
+        <p class="he">כתבו לי לפני היום ונסגור את זה ביחד. הכלל הפשוט: הביאו את הגלשן שאתם גולשים איתו הכי הרבה.</p>
+        <p class="en">Message me before the day and we'll sort it out together. The simple rule: bring the board you surf with most.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">מה אם אני מגיע קצת אחרי 7:50?</h3>
+        <h3 class="en">What if I arrive a bit after 7:50?</h3>
+        <p class="he">אז כולם מחכים. הסירה לא יוצאת בלי כולם, וזמן המים של כל הקבוצה מתקצר. אם משהו קרה בדרך — עדכנו בקבוצה מיד.</p>
+        <p class="en">Then everyone waits. The boat doesn't leave without the full group, and everyone's water time gets shorter. If something happens on the way, post in the group immediately.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="he">אני לא גולש מנוסה — זה בסדר?</h3>
+        <h3 class="en">I'm not an experienced surfer — is that OK?</h3>
+        <p class="he">יותר מבסדר. אני 3 מטר ממכם עם רמקול, והגל לא נגמר ולא בורח. זו הדרך הכי מהירה שאני מכיר להתקדם.</p>
+        <p class="en">More than OK. I'm 3 meters away with a speaker, and the wave never ends and never gets away from you. It's the fastest way to progress I know.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="he">
+      <h2>נתראה ב-7:50 על החוף. <em>מוכנים לבוקר מטורף.</em></h2>
+      <p class="lead">שמרו את הדף הזה בסימניות, והריצו עליו עין בערב שלפני.</p>
+    </div>
+    <div class="en">
+      <h2>See you at 7:50 on the beach. <em>Ready for an unreal morning.</em></h2>
+      <p class="lead">Bookmark this page and run your eyes over it the night before.</p>
+    </div>
+    <div class="quick-nav" style="justify-content:center">
+      <a class="btn btn-gold he" href="https://waze.com/ul/hsvc6b0kn4" target="_blank" rel="noopener">פתחו ניווט בוויז</a>
+      <a class="btn btn-gold en" href="https://waze.com/ul/hsvc6b0kn4" target="_blank" rel="noopener">Open Waze navigation</a>
+      <a class="btn he" style="background:rgba(255,255,255,.1)" href="/">חזרה לדף הקליניק</a>
+      <a class="btn en" style="background:rgba(255,255,255,.1)" href="/">Back to the clinic page</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="he">Omer Shoval Surf Clinic · חוף סירות מגדל, כנרת · <a href="/">דף הקליניק</a></p>
+    <p class="en">Omer Shoval Surf Clinic · Migdal Boats Beach, Sea of Galilee · <a href="/">Clinic page</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="https://chat.whatsapp.com/GFl61c1MUooA4BYHaJ03Lp?s=cl&amp;p=i&amp;ilr=1" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+function toggleLang() {
+  const html = document.documentElement;
+  const en = html.classList.toggle("lang-en");
+  html.setAttribute("dir", en ? "ltr" : "rtl");
+  html.setAttribute("lang", en ? "en" : "he");
+  document.getElementById("langBtn").textContent = en ? "עב" : "EN";
+}
+</script>
+</body>
+</html>
